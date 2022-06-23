@@ -18,7 +18,7 @@ interface GetLessonQueryResponse {
     title: string
     slug: string
     availableAt: Date
-    type: 'live' | 'class'
+    lessonType: 'live' | 'class'
   }[]
 }
 
@@ -37,7 +37,7 @@ export function Sidebar() {
             title={lesson.title}
             slug={lesson.slug}
             availableAt={new Date(lesson.availableAt)}
-            type={lesson.type}
+            type={lesson.lessonType}
           />
         ))}
       </div>
